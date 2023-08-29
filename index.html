@@ -1,11 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Rock Paper Scissors</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissor</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: rgb(228, 187, 135);
+        } 
+        .game {
+            background-color: rgb(185, 211, 38);
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 2px 4px  rgba(0, 0, 0, 0.1);
+
+        }
+        .choices {
+          display: flex;
+          justify-content: space-around;
+          margin-bottom: 20px;
+        }
+
+        .choice {
+            padding: 10px 20px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 4px;
+            font-weight: bold;
+        }
+
+        .choice:hover {
+            background-color: #e0e0e0;
+
+        }
+        
+        .result  {
+            text-align: center;
+                font-size: 18px;
+        }
+    </style>
 </head>
 <body>
-    <script src="./app.js"></script> 
+      <div class="game">
+        <div class="choices">
+            <button class="choice" data-choice="rock">Rock</button>
+            <button class="choice" data-choice="paper">Paper</button>
+            <button class="choice" data-choice="scissor">Scissor</button>
+        </div>
+        
+        <div class="result">
+            <p>Chose Your Move</p>
+        </div>
+        <div class="scores">
+            <p>Player: <span id="playerScore">0</span></p>
+            <p>Computer: <span id="computerScore">0</span></p>
+        </div>
+      </div>
+
+    <script src="./app.js"></script>
 </body>
 </html>
